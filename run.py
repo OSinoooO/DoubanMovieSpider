@@ -41,7 +41,7 @@ class DoubanMovieSpider(object):
                 # 数据去重
                 if info not in self.id_list:
                     f.write(json.dumps(info, ensure_ascii=False))
-                    f.write('\n')
+                    f.write(',\n')
 
     def run(self):
         tip_list = self.get_tip_list()
